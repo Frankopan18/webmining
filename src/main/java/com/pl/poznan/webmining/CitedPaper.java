@@ -3,6 +3,7 @@ package com.pl.poznan.webmining;
 import java.util.Date;
 
 // I joined github
+// we are learning github and it's going good
 // when we compare two cited papers we should just compare the titles --> Try to use comparator pattern to compare two of them...
 public class CitedPaper {
 
