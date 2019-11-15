@@ -1,6 +1,7 @@
 package com.pl.poznan.webmining;
 
 import java.util.Date;
+import java.util.List;
 
 // I joined github
 // we are learning github and it's going good
@@ -14,7 +15,17 @@ public class CitedPaper {
 	private String publicationVenu;
 	private Date dateOfPublication;
 	private int numOfCitations;
-	private String namesOfAuthors;
+	private List<String> namesOfAuthors;
+	
+	public CitedPaper(int pageNumber, int positionOnPage, String paperTitle, String publicationVenu, Date dateOfPublication, int numOfCitations, List<String> namesOfAuthors ) {
+		this.pageNumber = pageNumber;
+		this.positionOnPage = positionOnPage;
+		this.paperTitle = paperTitle;
+		this.publicationVenu = publicationVenu;
+		this.dateOfPublication = dateOfPublication;
+		this.numOfCitations = numOfCitations;
+		this.namesOfAuthors = namesOfAuthors;
+	}
 
 	public Long getPaperID() {
 		return paperID;
@@ -72,11 +83,11 @@ public class CitedPaper {
 		this.numOfCitations = numOfCitations;
 	}
 
-	public String getNamesOfAuthors() {
+	public List<String> getNamesOfAuthors() {
 		return namesOfAuthors;
 	}
 
-	public void setNamesOfAuthors(String namesOfAuthors) {
+	public void setNamesOfAuthors(List<String> namesOfAuthors) {
 		this.namesOfAuthors = namesOfAuthors;
 	}
 
