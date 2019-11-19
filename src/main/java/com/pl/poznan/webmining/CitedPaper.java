@@ -1,6 +1,5 @@
 package com.pl.poznan.webmining;
 
-import java.util.Date;
 import java.util.List;
 
 // I joined github
@@ -13,11 +12,14 @@ public class CitedPaper {
 	private int positionOnPage;
 	private String paperTitle;
 	private String publicationVenu;
-	private Date dateOfPublication;
+	private int dateOfPublication;
 	private int numOfCitations;
 	private List<String> namesOfAuthors;
 	
-	public CitedPaper(int pageNumber, int positionOnPage, String paperTitle, String publicationVenu, Date dateOfPublication, int numOfCitations, List<String> namesOfAuthors ) {
+	public CitedPaper(int pageNumber, int positionOnPage, String paperTitle, 
+			String publicationVenu, int dateOfPublication, int numOfCitations, 
+			List<String> namesOfAuthors ) {
+		
 		this.pageNumber = pageNumber;
 		this.positionOnPage = positionOnPage;
 		this.paperTitle = paperTitle;
@@ -67,11 +69,11 @@ public class CitedPaper {
 		this.publicationVenu = publicationVenu;
 	}
 
-	public Date getDateOfPublication() {
+	public int getDateOfPublication() {
 		return dateOfPublication;
 	}
 
-	public void setDateOfPublication(Date dateOfPublication) {
+	public void setDateOfPublication(int dateOfPublication) {
 		this.dateOfPublication = dateOfPublication;
 	}
 
@@ -95,7 +97,7 @@ public class CitedPaper {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((dateOfPublication == null) ? 0 : dateOfPublication.hashCode());
+		result = prime * result + dateOfPublication;
 		result = prime * result + ((namesOfAuthors == null) ? 0 : namesOfAuthors.hashCode());
 		result = prime * result + numOfCitations;
 		result = prime * result + pageNumber;
@@ -115,10 +117,7 @@ public class CitedPaper {
 		if (getClass() != obj.getClass())
 			return false;
 		CitedPaper other = (CitedPaper) obj;
-		if (dateOfPublication == null) {
-			if (other.dateOfPublication != null)
-				return false;
-		} else if (!dateOfPublication.equals(other.dateOfPublication))
+		if (dateOfPublication != other.dateOfPublication) 
 			return false;
 		if (namesOfAuthors == null) {
 			if (other.namesOfAuthors != null)
