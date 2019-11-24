@@ -85,6 +85,7 @@ public class QueryApp {
 	  while (cursor3.hasNext()) {
 		System.out.println(cursor3.next());
 	  }
+
 //
 //	  System.out.println("\n2. Find where number in 2,4 and 5");
 //	  BasicDBObject inQuery = new BasicDBObject();
